@@ -42,5 +42,5 @@ module.exports =
 
     request = http.request(options, callback)
 
-    request.end()
     request.write(post_data, encoding = 'utf8')
+    request.end()
