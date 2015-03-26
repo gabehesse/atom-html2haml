@@ -5,7 +5,7 @@ module.exports =
 
   activate: (state) ->
     @html2hamlView = new Html2hamlView(state.html2hamlViewState)
-    atom.workspaceView.command "html2haml:convert", => @convert()
+    atom.commands.add 'atom-workspace', "html2haml:convert", => @convert()
 
   deactivate: ->
     @html2hamlView.destroy()
